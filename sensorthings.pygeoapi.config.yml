@@ -81,10 +81,13 @@ resources:
         description: IOW Monitoring Locations
         keywords:
             - Test Gage
-        geojsonld: False
+        geojsonld: false
         context:
             - name: schema:name
               description: schema:description
+              related: schema:geo
+              Region: schema:geoWithin
+              HY_WaterBody: schema:geoWithin
         links:
             - type: application/html
               rel: canonical
@@ -102,5 +105,5 @@ resources:
           - type: feature
             name: Sensorthings 
             entity: Things 
-            data: https://sta-demo.internetofwater.dev/api/v1.1/
+            data: https://sensorthings-wq.brgm-rec.fr/FROST-Server/v1.0
             id_field: '@iot.id'
